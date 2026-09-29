@@ -315,3 +315,7 @@ python manage.py test apps.sales.tests apps.purchases.tests apps.users.tests -v 
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+---
+
+# CreatedBy: `CHESyrian` With Help: `Grok Ai`
