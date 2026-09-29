@@ -1,0 +1,13 @@
+Django==6.0.4
+django-cors-headers==4.9.0
+django-filter==25.2
+django-import-export==4.4.1
+django-scalar==0.2.0
+djangorestframework==3.17.1
+djangorestframework-simplejwt==5.3.1
+drf-spectacular==0.29.0
+drf-spectacular-sidecar==2026.5.1
+Pillow==10.3.0
+cryptography==46.0.3
+python-decouple==3.8
+psycopg[binary]==3.2.9

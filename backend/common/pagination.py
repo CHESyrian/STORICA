@@ -1,0 +1,25 @@
+from rest_framework.pagination import PageNumberPagination
+
+from common.api_response import ApiResponse
+
+from common.constants import SuccessMessages
+
+
+class StandardResultsPyQtPagination(PageNumberPagination):
+    page_size = 30
+    page_size_query_param = "page_size"
+    max_page_size = 200
+
+    def get_paginated_response(self, data):
+        return ApiResponse.success(
+            message=SuccessMessages.RETRIEVE, 
+            data=data,
+            paginator={
+                "count"       : self.page.paginator.count,
+                "page"        : self.page.number,
+                "page_size"   : self.get_page_size(self.request),
+                "total_pages" : self.page.paginator.num_pages,
+                "next"        : self.get_next_link() is not None,
+                "previous"    : self.get_previous_link() is not None,
+            },
+        )

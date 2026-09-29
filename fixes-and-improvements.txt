@@ -1,0 +1,59 @@
+- inventory view:
+	- variants tab:
+		- when add variant i get error, it was appear two dialogs show the error (it happend in some other operations too).
+		- add variant form (Weight, Length, Height, Width), allow it to be None if it was (0.0)
+	- stock movements tab:
+		- stock movement tab, remove (add stock movement), stock movement autocreation when the movement heppened (IN/OUT/TRANSFER/...) during sales/purchases transactions.
+
+- purchases view:
+	- suppliers tab :
+		- add supplier form, email is not required, allow it to be None
+		- config (edit, delete supplier) buttons in navbar
+		- config (flag:verified, active:active) checkbox filters in navbar
+		- remove (choice) filter from navbar 
+		- check on utils/contansts.py (*_NAVBAR_COMPONENTS) to know which filter appear in navbar
+	- orders tab:
+		- draft order cant add invoice, add invoice after post it
+
+- sales view:
+	- customers tab :
+		- add customer form, email is not required, allow it to be None
+		- config (edit, delete supplier) buttons in navbar
+		- config (flag:verified, active:active) checkbox filters in navbar
+		- remove (choice) filter from navbar 
+		- check on utils/contansts.py (*_NAVBAR_COMPONENTS) to know which filter appear in navbar
+	
+	- orders tab:
+		- draft order cant add invoice, add invoice after post it
+		- when add sales invoice i got:
+			[09/Sep/2026 08:33:24] "POST /api/sales-invoices/ HTTP/1.1" 400 154
+			[09/Sep/2026 08:33:55] "GET /api/health/ HTTP/1.1" 200 60
+			[WARNING] 2026-09-09 08:33:58,362 handlers : DRF Exception: {'items': [{'sale_price': [ErrorDetail(string='This field is required.', code='required')]}]}
+			Traceback (most recent call last):
+			  File "/home/chesyrian/PyVenv/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+			    response = handler(request, *args, **kwargs)
+			               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+			  File "/home/chesyrian/PyVenv/Projects/NewSTORICA/backend/apps/sales/views/sales_invoice_view.py", line 96, in create
+			    serializer.is_valid(raise_exception=True)
+			  File "/home/chesyrian/PyVenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 233, in is_valid
+			    raise ValidationError(self.errors)
+			rest_framework.exceptions.ValidationError: {'items': [{'sale_price': [ErrorDetail(string='This field is required.', code='required')]}]}
+			Bad Request: /api/sales-invoices/
+			[WARNING] 2026-09-09 08:33:58,364 log : Bad Request: /api/sales-invoices/
+			[09/Sep/2026 08:33:58] "POST /api/sales-invoices/ HTTP/1.1" 400 154
+		but no sale_price field in form.
+
+- users view:
+	- users tab:
+		- config (choice) checkbox filter to use/include Role options
+		- check on utils/contansts.py (*_NAVBAR_COMPONENTS) to know which filter appear in navbar
+
+
+- panel view:
+	- quick action tab:
+		- fit and make all buttons in same width
+
+	- reports tab:
+		- fix style to be form/widget/label in same backgrount, صithout color variations or distinctions. 
+
+- add confirm dialog when close application or logout

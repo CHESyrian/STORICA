@@ -1,0 +1,27 @@
+<div class="module" style="margin-bottom: 20px;">
+    <table style="width: 100%; border-collapse: collapse;">
+        <caption>User Statistics</caption>
+        <tr>
+            <th style="padding: 8px; text-align: left;">Total Users</th>
+            <td style="padding: 8px;"><strong>{{ total_users }}</strong></td>
+            <th style="padding: 8px; text-align: left;">Active Users</th>
+            <td style="padding: 8px;"><strong>{{ active_users }}</strong></td>
+        </tr>
+        <tr>
+            <th style="padding: 8px; text-align: left;">Online Now</th>
+            <td style="padding: 8px;"><strong style="color: green;">{{ online_users }}</strong></td>
+            <th style="padding: 8px; text-align: left;">Today's Logins</th>
+            <td style="padding: 8px;"><strong>{{ today_logins }}</strong></td>
+        </tr>
+        <tr>
+            <th style="padding: 8px; text-align: left;">Administrators</th>
+            <td style="padding: 8px;"><strong style="color: #dc3545;">{{ admins }}</strong></td>
+            <th style="padding: 8px; text-align: left;">Managers</th>
+            <td style="padding: 8px;"><strong style="color: #fd7e14;">{{ managers }}</strong></td>
+        </tr>
+        <tr>
+            <th style="padding: 8px; text-align: left;">Regular Users</th>
+            <td colspan="3" style="padding: 8px;"><strong style="color: #28a745;">{{ users }}</strong></td>
+        </tr>
+    </table>
+</div>
