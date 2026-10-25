@@ -1,0 +1,34 @@
+[project]
+name = "storica"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "CHESyrian", email = "tarek940gh@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "cryptography>=41.0.7",
+    "django>=6.0.4",
+    "django-cors-headers>=4.9.0",
+    "django-filter>=25.2",
+    "django-import-export>=4.4.1",
+    "django-scalar>=0.2.0",
+    "djangorestframework>=3.17.1",
+    "djangorestframework-simplejwt>=5.3.1",
+    "drf-spectacular>=0.29.0",
+    "drf-spectacular-sidecar>=2026.5.1",
+    "pillow>=10.3.0",
+    "psycopg[binary]>=3.2.9",
+    "pyqt6>=6.6.1",
+    "python-dateutil>=2.8.2",
+    "python-decouple>=3.8",
+    "requests>=2.31.0",
+]
+
+[project.scripts]
+storica = "storica:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"

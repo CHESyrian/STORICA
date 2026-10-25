@@ -1,6 +1,6 @@
 # Python
 __pycache__/
-*/__pycache__/
+*/__pychache__/
 .ipynb_checkpoints/
 */.ipynb_checkpoints/
 *.py[cod]
@@ -33,9 +33,8 @@ env/
 .env
 .env.local
 .env.*.local
-*/.env
-*/.env.local
-*/.env.*.local
+.env.*
+!.env.example
 
 # Django
 *.log
